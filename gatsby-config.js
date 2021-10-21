@@ -4,7 +4,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'LSDao',
 		siteUrl: `https://www.gatsbyjs.com`,
-		description: `LSDao`,
+		description: `Innovative art delivery system.`,
 	},
 	plugins: [
 		'gatsby-plugin-sass',
