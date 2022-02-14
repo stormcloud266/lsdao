@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './button.module.scss'
 
-const Button = ({ href, twitter, children }) => {
-	const classes = classnames(twitter && styles.twitter, styles.button)
+const Button = ({ href, className, children }) => {
+	const classes = classnames(styles.button, className && className)
 
 	return (
 		<a href={href} className={classes} target='_blank' rel='noreferrer'>
@@ -17,6 +17,6 @@ export default Button
 
 Button.propTypes = {
 	href: PropTypes.string,
-	twitter: PropTypes.bool,
+	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 }

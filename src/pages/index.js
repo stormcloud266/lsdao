@@ -4,7 +4,6 @@ import ReactPlayer from 'react-player/lazy'
 import { Layout, Seo } from '@global'
 import { Container } from '@UI'
 import { Buttons, Title } from '@components/home'
-import videoFile from '@videos/lsdaopamp.mp4'
 
 const IndexPage = () => {
 	return (
@@ -12,7 +11,7 @@ const IndexPage = () => {
 			<Seo />
 			<Container>
 				<ReactPlayer
-					url={videoFile}
+					url='/lsdaopamp.mp4'
 					width='100%'
 					height='100%'
 					controls

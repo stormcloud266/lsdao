@@ -1,3 +1,5 @@
+@import '@globalStyles/mixins';
+
 .buttonContainer {
 	display: flex;
 	align-items: center;
@@ -8,4 +10,12 @@
 	a {
 		margin: 0 1.4rem 2.8rem;
 	}
+}
+
+.twitter {
+	@include button(rgb(119, 227, 235));
+}
+
+.lofi {
+	@include button(#ffccd0);
 }

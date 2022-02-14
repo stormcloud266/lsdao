@@ -3,6 +3,19 @@
 .title {
 	font-size: 9rem;
 	letter-spacing: 2px;
+	background: linear-gradient(
+		135deg,
+		hsl(98 100% 62%),
+		rgb(119, 227, 235),
+		rgb(73, 75, 221),
+		rgb(209, 73, 221)
+	);
+	background-size: 300%;
+	animation: bg 20s infinite alternate;
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .flex {
@@ -12,19 +25,7 @@
 
 .titleContainer {
 	margin-bottom: 3.6rem;
-	background: linear-gradient(
-		135deg,
-		hsl(98 100% 62%),
-		rgb(119, 227, 235),
-		rgb(73, 75, 221),
-		rgb(209, 73, 221)
-	);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	text-align: center;
-	background-size: 300%;
-	animation: bg 20s infinite alternate;
 }
 
 @keyframes bg {

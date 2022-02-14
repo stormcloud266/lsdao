@@ -17,26 +17,42 @@ const customAnimation = keyframes`
   }
 `
 
+const links = [
+	{
+		icon: <Twitter />,
+		label: 'Twitter',
+		href: 'https://twitter.com/lovesocietydao',
+		className: styles.twitter,
+	},
+	{
+		icon: <Link />,
+		label: 'Haveaniceday.wtf',
+		href: 'https://haveaniceday.wtf/',
+	},
+	{
+		icon: <Link />,
+		label: 'LoFi Hits',
+		href: 'https://www.lofihits.wtf/',
+		className: styles.lofi,
+	},
+]
+
 const Buttons = () => {
 	return (
 		<div className={styles.buttonContainer}>
-			<Reveal keyframes={customAnimation} triggerOnce>
-				<Button href='https://twitter.com/lovesocietydao' twitter>
-					<span>
-						<Twitter />
-					</span>
-					Twitter
-				</Button>
-			</Reveal>
-
-			<Reveal keyframes={customAnimation} delay={300} triggerOnce>
-				<Button href='https://haveaniceday.wtf/'>
-					<span>
-						<Link />
-					</span>
-					Haveaniceday.wtf
-				</Button>
-			</Reveal>
+			{links.map(({ icon, label, href, className }, i) => (
+				<Reveal
+					keyframes={customAnimation}
+					delay={i * 300}
+					triggerOnce
+					key={label}
+				>
+					<Button href={href} className={className && className}>
+						<span>{icon}</span>
+						{label}
+					</Button>
+				</Reveal>
+			))}
 		</div>
 	)
 }

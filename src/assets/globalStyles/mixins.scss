@@ -17,3 +17,22 @@
 		@content;
 	}
 }
+
+@mixin button($color) {
+	background-image: linear-gradient(to left, rgb(40, 36, 41) 50%, $color 50%);
+
+	span {
+		background-image: linear-gradient(
+			to right,
+			rgb(40, 36, 41) 50%,
+			$color 50%
+		);
+	}
+
+	&:hover,
+	&:focus {
+		svg {
+			color: $color;
+		}
+	}
+}
